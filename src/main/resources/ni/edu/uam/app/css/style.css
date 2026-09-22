@@ -1,1 +1,165 @@
-/* Falta Implementacion*/
+/* Paleta y tipografía */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", sans-serif;
+    -fx-font-size: 13px;
+    -fx-base-background: #F4F6F9;
+    -fx-card-background: #FFFFFF;
+    -fx-sidebar-background: #1E293B;
+    -fx-primary-color: #3B82F6;
+    -fx-primary-hover: #2563EB;
+    -fx-text-main: #0F172A;
+    -fx-text-muted: #64748B;
+    -fx-border-subtle: #E2E8F0;
+}
+
+/* Barra lateral */
+.sidebar {
+    -fx-background-color: -fx-sidebar-background;
+    -fx-padding: 24 16 24 16;
+}
+
+.sidebar-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 11px;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 13px;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-padding: 10 16;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #334155;
+    -fx-text-fill: #FFFFFF;
+}
+
+.nav-button:focused, .nav-button.active {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/* Contenedor central */
+.content-area {
+    -fx-background-color: -fx-base-background;
+    -fx-padding: 30;
+}
+
+/* Tarjetas */
+.card {
+    -fx-background-color: -fx-card-background;
+    -fx-background-radius: 12px;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.04), 12, 0.2, 0, 4);
+}
+
+.card-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+.card-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* Campos de entrada */
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+    -fx-font-size: 12px;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: -fx-border-subtle;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8 12;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.25), 4, 0, 0, 0);
+}
+
+/* Botones principales */
+.btn-primary {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -fx-primary-hover;
+}
+
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-border-subtle;
+    -fx-border-radius: 6px;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: -fx-text-main;
+}
+
+/* Tablas */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-border-subtle;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: transparent transparent -fx-border-subtle transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-muted;
+    -fx-padding: 8 4;
+}
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #F1F5F9 transparent;
+    -fx-padding: 4 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FAFAFA;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #EFF6FF;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #DBEAFE;
+    -fx-text-fill: -fx-text-main;
+}
