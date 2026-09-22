@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.edu.uam._corteexamen.controller.MainController"
+            prefHeight="620.0" prefWidth="950.0">
+
+    <!-- Menú lateral izquierdo -->
+    <left>
+        <VBox spacing="10.0" styleClass="sidebar" prefWidth="220.0">
+            <VBox spacing="2.0">
+                <Label text="EMPRESARIAL" styleClass="sidebar-title" />
+                <Label text="Gestión de Personal" styleClass="sidebar-subtitle" />
+            </VBox>
+
+            <VBox spacing="6.0">
+                <padding>
+                    <Insets top="30.0" />
+                </padding>
+                <Button fx:id="btnNavForm" text="Registrar Empleado"
+                        maxWidth="Infinity" onAction="#handleNavForm"
+                        styleClass="nav-button" />
+                <Button fx:id="btnNavList" text="Listado de Empleados"
+                        maxWidth="Infinity" onAction="#handleNavList"
+                        styleClass="nav-button" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Panel central dinámico donde se cargan los módulos -->
+    <center>
+        <StackPane fx:id="contentContainer" styleClass="content-area" />
+    </center>
+</BorderPane>

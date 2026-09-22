@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam._corteexamen.EmployeeFormController"
+      alignment="TOP_CENTER" spacing="16.0">
+
+    <VBox maxWidth="550.0" spacing="20.0" styleClass="card">
+        <!-- Encabezado de la tarjeta -->
+        <VBox spacing="4.0">
+            <Label text="Registro de Empleado" styleClass="card-title" />
+            <Label text="Complete los datos solicitados para ingresar al personal." styleClass="card-subtitle" />
+        </VBox>
+
+        <!-- Formulario -->
+        <GridPane hgap="16.0" vgap="14.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" />
+                <ColumnConstraints percentWidth="50" />
+            </columnConstraints>
+
+            <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label text="Nombres *" styleClass="form-label" />
+                <TextField fx:id="txtFirstName" promptText="Ej: Juan Antonio" />
+            </VBox>
+
+            <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label text="Apellidos *" styleClass="form-label" />
+                <TextField fx:id="txtLastName" promptText="Ej: Pérez Duarte" />
+            </VBox>
+
+            <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                <Label text="Cargo *" styleClass="form-label" />
+                <ComboBox fx:id="cmbPosition" maxWidth="Infinity" promptText="Seleccione el cargo..." />
+            </VBox>
+
+            <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+                <Label text="Salario Mensual ($) *" styleClass="form-label" />
+                <TextField fx:id="txtSalary" promptText="Ej: 1500.00" />
+            </VBox>
+        </GridPane>
+
+        <!-- Botones de Acción -->
+        <HBox alignment="CENTER_RIGHT" spacing="12.0">
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+            <Button fx:id="btnClear" text="Limpiar Campos" onAction="#handleClear" styleClass="btn-secondary" />
+            <Button fx:id="btnSave" text="Guardar Empleado" onAction="#handleSave" styleClass="btn-primary" />
+        </HBox>
+    </VBox>
+</VBox>
