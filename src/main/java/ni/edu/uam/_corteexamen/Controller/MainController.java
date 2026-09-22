@@ -1,4 +1,4 @@
-package ni.edu.uam._corteexamen.Controller;
+package ni.edu.uam._corteexamen.controller;
 
 import ni.edu.uam._corteexamen.util.NavigationUtil;
 import javafx.fxml.FXML;
@@ -18,19 +18,18 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NavigationUtil.setMainContent(contentContainer);
-        // Vista predeterminada al iniciar
         handleNavForm();
     }
 
     @FXML
     private void handleNavForm() {
-        NavigationUtil.loadView("/com/app/view/EmployeeFormView.fxml");
+        NavigationUtil.loadView("/ni/edu/uam/view/EmployeeFormView.fxml");
         updateActiveButton(btnNavForm, btnNavList);
     }
 
     @FXML
     private void handleNavList() {
-        NavigationUtil.loadView("/com/app/view/EmployeeListView.fxml");
+        NavigationUtil.loadView("/ni/edu/uam/view/EmployeeListView.fxml");
         updateActiveButton(btnNavList, btnNavForm);
     }
 

@@ -1,4 +1,4 @@
-package ni.edu.uam._corteexamen.Controller;
+package ni.edu.uam._corteexamen.controller;
 
 import ni.edu.uam._corteexamen.model.Employee;
 import ni.edu.uam._corteexamen.service.EmployeeService;
@@ -88,6 +88,6 @@ public class EmployeeListController implements Initializable {
 
     @FXML
     private void handleGoToForm() {
-        NavigationUtil.loadView("/com/app/view/EmployeeFormView.fxml");
+        NavigationUtil.loadView("/ni/edu/uam/view/EmployeeListView.fxml");
     }
 }

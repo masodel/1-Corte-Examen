@@ -12,7 +12,6 @@
             fx:controller="ni.edu.uam._corteexamen.controller.MainController"
             prefHeight="620.0" prefWidth="950.0">
 
-    <!-- Menú lateral izquierdo -->
     <left>
         <VBox spacing="10.0" styleClass="sidebar" prefWidth="220.0">
             <VBox spacing="2.0">
@@ -34,7 +33,6 @@
         </VBox>
     </left>
 
-    <!-- Panel central dinámico donde se cargan los módulos -->
     <center>
         <StackPane fx:id="contentContainer" styleClass="content-area" />
     </center>

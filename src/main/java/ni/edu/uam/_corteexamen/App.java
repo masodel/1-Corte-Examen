@@ -6,14 +6,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URL;
+
 public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/app/view/MainView.fxml"));
-        Parent root = loader.load();
+        URL fxmlLocation = getClass().getResource("/ni/edu/uam/view/MainView.fxml");
+        if (fxmlLocation == null) {
+            throw new IllegalStateException("No se encontró /ni/edu/uam/view/MainView.fxml en resources");
+        }
+        Parent root = FXMLLoader.load(fxmlLocation);
 
         Scene scene = new Scene(root, 950, 620);
-        scene.getStylesheets().add(getClass().getResource("/com/app/css/styles.css").toExternalForm());
+
+        URL cssLocation = getClass().getResource("/ni/edu/uam/css/style.css");
+        if (cssLocation != null) {
+            scene.getStylesheets().add(cssLocation.toExternalForm());
+        }
 
         primaryStage.setTitle("Gestión de Empleados");
         primaryStage.setMinWidth(850);

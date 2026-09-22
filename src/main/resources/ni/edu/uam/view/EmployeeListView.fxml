@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -14,7 +13,6 @@
       fx:controller="ni.edu.uam._corteexamen.controller.EmployeeListController"
       spacing="16.0" styleClass="card" VBox.vgrow="ALWAYS">
 
-    <!-- Header con título y métricas -->
     <HBox alignment="CENTER_LEFT" spacing="16.0">
         <VBox spacing="2.0" HBox.hgrow="ALWAYS">
             <Label text="Plantilla de Empleados" styleClass="card-title" />
@@ -23,13 +21,11 @@
         <Label fx:id="lblTotalRecords" text="Total: 0 registros" styleClass="card-subtitle" style="-fx-font-weight: bold;" />
     </HBox>
 
-    <!-- Barra de búsqueda y refresh -->
     <HBox spacing="10.0" alignment="CENTER_LEFT">
         <TextField fx:id="txtSearch" promptText="Buscar por nombre, apellido o cargo..." HBox.hgrow="ALWAYS" />
         <Button text="Ir a Registro" onAction="#handleGoToForm" styleClass="btn-primary" />
     </HBox>
 
-    <!-- Tabla -->
     <TableView fx:id="tblEmployees" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="colId" text="Código" prefWidth="110.0" />
